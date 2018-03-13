@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 import sys,glob,os,time,codecs
 import logging
@@ -102,16 +102,16 @@ else:	## if not imported, go into interactive mode
 				os.system('cd '+dir_mtree+' && '+'./get-deps.sh && cd '+dir_prosodic)
 
 		else:
-			print "<error> file not found"
+			print("<error> file not found")
 
 
 	except:
 		## welcome
-		print ""
-		print "################################################"
-		print "## welcome to prosodic!                  v1.1 ##"
-		print "################################################"
-		print ""
+		print("")
+		print("################################################")
+		print("## welcome to prosodic!                  v1.1 ##")
+		print("################################################")
+		print("")
 		text=""
 		cmd=""
 
@@ -183,19 +183,19 @@ else:	## if not imported, go into interactive mode
 		## ask for input only if argument not received
 		if not skip:
 			try:
-				text=raw_input(msg).strip().decode('utf-8',errors='ignore')
+				text=input(msg).strip()
 			except (KeyboardInterrupt,EOFError) as e:
 				text='/exit'
 		else:
 			skip=False
 
 		if text=="/exit":
-			for k,v in dict.items():
+			for k,v in list(dict.items()):
 				#dict[k].save_tabbed()
 				dict[k].persist()
 				dict[k].close()
-			print
-			print ">> goodbye."
+			print()
+			print(">> goodbye.")
 			exit()
 
 		elif text and text[0]!="/":
@@ -204,11 +204,11 @@ else:	## if not imported, go into interactive mode
 			####################
 
 		elif text.startswith('/paste'):
-			print ">> enter or paste your content here. press Ctrl-D when finished."
+			print(">> enter or paste your content here. press Ctrl-D when finished.")
 			contents = []
 			while True:
 				try:
-					line = raw_input("").decode('utf-8',errors='ignore')
+					line = input("")
 					contents.append(line)
 				except EOFError:
 					break
@@ -233,7 +233,7 @@ else:	## if not imported, go into interactive mode
 			arg=' '.join(text.split()[1:]) if len(text.split())>1 else None
 			include_bounded = arg=='all'
 			obj.report(meter=METER, include_bounded=include_bounded)
-			print '\t>> options:\n\t\t/report\t\treport unbounded, metrical parses\n\t\t/report all\treport all parses, including those bounded or unmetrical'
+			print('\t>> options:\n\t\t/report\t\treport unbounded, metrical parses\n\t\t/report all\treport all parses, including those bounded or unmetrical')
 
 		elif text=="/chart":
 			obj.chart()
@@ -255,7 +255,7 @@ else:	## if not imported, go into interactive mode
 				for dx in func(meter=METER,all_parses=False):
 					pass
 
-			print '\t>> options:\n\t\t/stats all\t\tsave all stats\n\t\t/stats lines\t\tsave stats on lines\n\t\t/stats ot\t\tsave stats on lines in OT/maxent format\n\t\t/stats pos\t\tsave stats on positions'
+			print('\t>> options:\n\t\t/stats all\t\tsave all stats\n\t\t/stats lines\t\tsave stats on lines\n\t\t/stats ot\t\tsave stats on lines in OT/maxent format\n\t\t/stats pos\t\tsave stats on positions')
 
 		elif text=="/scan" and obj.isParsed():
 			obj.scansion(meter=METER)
@@ -271,12 +271,12 @@ else:	## if not imported, go into interactive mode
 		elif text=="/tree":
 			obj.om(obj.tree()+"\n\n",conscious=False)
 			#print obj.tree()
-			print
+			print()
 
 		elif text=="/grid":
 			grid=obj.grid()
 			obj.om("\n"+grid+"\n",conscious=False)
-			print
+			print()
 
 		elif text=="/show":
 			obj.show()
@@ -294,31 +294,31 @@ else:	## if not imported, go into interactive mode
 				mnum2name[mnum]=mname
 				#print '>> meter #'+str(mnum)+': '+mname
 				if not arg:
-					print '[#'+str(mnum)+']'
-					print mmeter
+					print('[#'+str(mnum)+']')
+					print(mmeter)
 					#print '\t>> id:',mname
 					#print '\t>> name:',msettings['name']
 					#print '\t>> constraints:'
 					#for cname in sorted(msettings['constraints']):
 					#	print '\t\t>>',cname
-					print
+					print()
 
 			if arg and arg.isdigit():
 				meteri=int(arg)
 			else:
 				try:
-					meteri = raw_input('>> please type the number of the meter you would like to use.\n').strip()
+					meteri = input('>> please type the number of the meter you would like to use.\n').strip()
 				except (KeyboardInterrupt,EOFError) as e:
 					continue
 
 				if not meteri.isdigit():
-					print '>> not a number. meter not selected.'
+					print('>> not a number. meter not selected.')
 					continue
 
 				meteri=int(meteri)
 			config['meter']=mnum2name[meteri]
 			METER = config['meters'][config['meter']]
-			print '>> meter set to ['+METER.id+']: '+METER.name
+			print('>> meter set to ['+METER.id+']: '+METER.name)
 
 
 
@@ -328,7 +328,7 @@ else:	## if not imported, go into interactive mode
 			q=""
 			while (not q.startswith("/")):
 				try:
-					q=raw_input(">> please type the conjunction of features for which you are searching [type / to exit]:\neg: [-voice] (Syllable: (Onset: [+voice]) (Coda: [+voice]))\n\n").strip()
+					q=input(">> please type the conjunction of features for which you are searching [type / to exit]:\neg: [-voice] (Syllable: (Onset: [+voice]) (Coda: [+voice]))\n\n").strip()
 				except (KeyboardInterrupt,EOFError) as e:
 					text=''
 					break
@@ -368,26 +368,26 @@ else:	## if not imported, go into interactive mode
 				for filename in os.listdir(dir_corpus):
 					if filename.startswith("."): continue
 					if os.path.isdir(os.path.join(dir_corpus,filename)):
-						print "\t"+filename+"/"
+						print("\t"+filename+"/")
 						files=[]
 						for filename2 in glob.glob(os.path.join(os.path.join(dir_corpus,filename), "*.txt")):
 							files.append(filename2.replace(dir_corpus,'').replace(filename+'/',''))
-						print "\t\t"+" | ".join(files)
-						print
+						print("\t\t"+" | ".join(files))
+						print()
 					else:
 						if filename[-4]==".txt":
-							print "\t"+filename
+							print("\t"+filename)
 
-				print
-				print "\t" + hdrbar
+				print()
+				print("\t" + hdrbar)
 				#print ">> to load a text, please either:"
-				print "\t>> select from one of the relative paths above:"
-				print "\t     i.e. /text [foldername]/[filename.txt]"
-				print "\t     e.g. /text shakespeare/sonnet-001.txt"
-				print "\t>> or use an absolute path to a text file on your disk:"
-				print "\t     e.g. /text /absolute/path/to/file.txt"
-				print "\t" + hdrbar
-				print
+				print("\t>> select from one of the relative paths above:")
+				print("\t     i.e. /text [foldername]/[filename.txt]")
+				print("\t     e.g. /text shakespeare/sonnet-001.txt")
+				print("\t>> or use an absolute path to a text file on your disk:")
+				print("\t     e.g. /text /absolute/path/to/file.txt")
+				print("\t" + hdrbar)
+				print()
 
 			else:
 				if os.path.exists(os.path.join(dir_corpus,fn)):
@@ -395,7 +395,7 @@ else:	## if not imported, go into interactive mode
 				elif os.path.exists(fn):
 					obj=Text(fn)
 				else:
-					print "<file not found>\n"
+					print("<file not found>\n")
 					continue
 
 		elif text.startswith('/corpus'):
@@ -406,19 +406,19 @@ else:	## if not imported, go into interactive mode
 				for filename in os.listdir(dir_corpus):
 					if filename.startswith("."): continue
 					if os.path.isdir(os.path.join(dir_corpus,filename)):
-						print "\t"+filename
+						print("\t"+filename)
 
 
-				print
-				print "\t" + hdrbar
+				print()
+				print("\t" + hdrbar)
 				#print ">> to load a text, please either:"
-				print "\t>> select from one of the relative paths above:"
-				print "\t     i.e. /corpus [foldername]"
-				print "\t     e.g. /corpus yeats"
-				print "\t>> or use an absolute path to a folder of text files on your disk:"
-				print "\t     e.g. /corpus /absolute/path/to/folder/of/text/files"
-				print "\t" + hdrbar
-				print
+				print("\t>> select from one of the relative paths above:")
+				print("\t     i.e. /corpus [foldername]")
+				print("\t     e.g. /corpus yeats")
+				print("\t>> or use an absolute path to a folder of text files on your disk:")
+				print("\t     e.g. /corpus /absolute/path/to/folder/of/text/files")
+				print("\t" + hdrbar)
+				print()
 
 			else:
 				if os.path.exists(os.path.join(dir_corpus,fn)):
@@ -426,13 +426,13 @@ else:	## if not imported, go into interactive mode
 				elif os.path.exists(fn):
 					obj = Corpus(fn)
 				else:
-					print "<path not found>\n"
+					print("<path not found>\n")
 					continue
 
 		elif text.startswith('/save'):
 			fn=text.replace('/save','').strip()
 			if not fn:
-				fn=raw_input('\n>> please enter a file name to save output to,\n\t- either as a simple filename in the default directory ['+config['folder_results']+'],\n\t- or as a full path.\n\n').strip()
+				fn=input('\n>> please enter a file name to save output to,\n\t- either as a simple filename in the default directory ['+config['folder_results']+'],\n\t- or as a full path.\n\n').strip()
 
 			try:
 				ofn=None
@@ -445,13 +445,11 @@ else:	## if not imported, go into interactive mode
 
 				if not os.path.exists(dirname): os.makedirs(dirname)
 				of=codecs.open(ofn,'w',encoding='utf-8')
-				if type(being.omm) in [str]:
-					being.omm=being.omm.decode('utf-8',errors='ignore')
 				of.write(being.omm)
 				of.close()
-				print ">> saving previous output to: "+ofn
+				print(">> saving previous output to: "+ofn)
 			except IOError:
-				print "** [error: file not saved.]\n\n"
+				print("** [error: file not saved.]\n\n")
 
 		elif text.startswith('/eval'):
 			path=os.path.join(dir_prosodic,config['folder_tagged_samples'])
@@ -464,22 +462,22 @@ else:	## if not imported, go into interactive mode
 					if '.evaluated.' in _fn: continue
 					fn_i=len(fns)
 					fns+=[_fn]
-					print '[{0}] {1}'.format(fn_i+1, _fn)
-				inp=raw_input('\n>> please enter the number of the file to use as evaluation data:\n').strip()
+					print('[{0}] {1}'.format(fn_i+1, _fn))
+				inp=input('\n>> please enter the number of the file to use as evaluation data:\n').strip()
 				if not inp.isdigit():
-					print '<<invalid: not a number>>'
+					print('<<invalid: not a number>>')
 					continue
 
 				fn_i=int(inp)-1
 				fn=fns[fn_i]
 
-			key_line = raw_input('\n>> please enter the column name in the file for the column of lines to parse: [default: line]\n').strip()
+			key_line = input('\n>> please enter the column name in the file for the column of lines to parse: [default: line]\n').strip()
 			if not key_line: key_line='line'
 
-			key_parse = raw_input('\n>> please enter the column name in the file for the column of hand-done parses (using "s" for metrically strong syllables, "w" for metrically weak ones): [default: parse]\n').strip()
+			key_parse = input('\n>> please enter the column name in the file for the column of hand-done parses (using "s" for metrically strong syllables, "w" for metrically weak ones): [default: parse]\n').strip()
 			if not key_parse: key_parse='parse'
 
-			key_meterscheme = raw_input('\n>> [optional, will use if present] please enter the column name in the file for the column indicating the metrical template in the poem (anapestic, dactylic, iambic, or trochaic): [default: Meter Scheme]\n').strip()
+			key_meterscheme = input('\n>> [optional, will use if present] please enter the column name in the file for the column indicating the metrical template in the poem (anapestic, dactylic, iambic, or trochaic): [default: Meter Scheme]\n').strip()
 			if not key_meterscheme: key_meterscheme='Meter Scheme'
 
 			assess(os.path.join(path,fn), key_meterscheme=key_meterscheme, key_parse=key_parse, key_line=key_line, meter=METER)

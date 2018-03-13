@@ -12,7 +12,7 @@ class Word(entity):
 			if not len(w.__dict__):
 				self.broken=True
 			else:
-				for k,v in w.__dict__.items():
+				for k,v in list(w.__dict__.items()):
 					setattr(self,k,v)
 			return
 
@@ -68,7 +68,7 @@ class Word(entity):
 		return "<"+self.classname()+"."+self.u2s(self.token)+"> ["+self.__str__stressedSylls()+"]"
 
 	def __str__(self):
-		tok=self.token if type(self.token)==str else self.token.encode('utf-8')
+		tok=self.token if type(self.token)==str else self.token
 		return tok+str("\t<")+str(self.__str__stressedSylls())+str(">")
 		#return self.token+"\t<"+self.__str__stressedSylls()+">"
 
@@ -234,16 +234,16 @@ class Word(entity):
 			if len(self.children)==1:
 			    stress_pattern=['P']
 			else:
-			    print "!! cannot force stressed variant to polysyllabic word",self,"without a stress pattern set"
+			    print("!! cannot force stressed variant to polysyllabic word",self,"without a stress pattern set")
 			    return
 
 		if len(stress_pattern) != len(self.children):
-			print "!! stress_pattern",stress_pattern,"does not match # sylls of this word:",len(self.children),self.children
+			print("!! stress_pattern",stress_pattern,"does not match # sylls of this word:",len(self.children),self.children)
 			return
 
 		#assert len(stress_pattern) == len(self.ipa.split('.'))
 		if len(stress_pattern) != len(self.ipa.split('.')):
-			print "!! stress_pattern",stress_pattern,"does not match # sylls of this word:",len(self.children),self.children
+			print("!! stress_pattern",stress_pattern,"does not match # sylls of this word:",len(self.children),self.children)
 			return
 
 		## Re-code stress pattern if necessary

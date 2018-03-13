@@ -34,12 +34,14 @@ class Phoneme(entity):
 		if strself in ipa2cmu:
 			return ipa2cmu[strself].lower()
 		else:
-			print "<error> no cmu transcription for phoneme: ["+strself+"]"
+			print("<error> no cmu transcription for phoneme: ["+strself+"]")
 			return strself
 		
+	def __hash__(self):
+		return hash(self.phon)
 	def __str__(self):
 		if self.children:
-			return self.u2s(u"".join([x.phon for x in self.children]))
+			return self.u2s("".join([x.phon for x in self.children]))
 		else:
 			return self.u2s(self.phon)
 			
@@ -63,7 +65,7 @@ class Phoneme(entity):
 	@property
 	def phon_str(self):
 		if self.phon: return self.phon
-		return u''.join(phon.phon for phon in self.children)
+		return ''.join(phon.phon for phon in self.children)
 
 	@property
 	def featset(self):
@@ -81,10 +83,10 @@ class Phoneme(entity):
 		if self.children:
 			for child in self.children:
 				#print "CHILD:",child,child.featset
-				for f,v in child.feats.items():
+				for f,v in list(child.feats.items()):
 					fs[f]=int(v) if v!=None else 0
 		else:
-			for f,v in self.feats.items():
+			for f,v in list(self.feats.items()):
 				fs[f]=int(v) if v!=None else 0
 		return fs
 
@@ -105,7 +107,7 @@ class Phoneme(entity):
 		dists=[]
 		for fs1 in lfs1:
 			for fs2 in lfs2:
-				allkeys=set(fs1.keys() + fs2.keys())
+				allkeys=set(list(fs1.keys()) + list(fs2.keys()))
 				f=sorted(list(allkeys))
 				v1=[float(fs1.get(fx,0)) for fx in f]
 				v2=[float(fs2.get(fx,0)) for fx in f]

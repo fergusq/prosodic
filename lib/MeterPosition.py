@@ -20,7 +20,7 @@ class MeterPosition(Parse):
 	def __copy__(self):
 		other = MeterPosition(self.meter, self.meterVal)
 		other.slots = self.slots[:]
-		for k,v in self.constraintScores.items():
+		for k,v in list(self.constraintScores.items()):
 			other.constraintScores[k]=copy(v)
 		return other
 
@@ -31,7 +31,7 @@ class MeterPosition(Parse):
 	@property
 	def violated(self):
 		viold=[]
-		for c,viol in self.constraintScores.items():
+		for c,viol in list(self.constraintScores.items()):
 			if viol:
 				viold+=[c]
 		return viold
@@ -55,13 +55,13 @@ class MeterPosition(Parse):
 	def posfeats(self):
 		posfeats={'prom.meter':[]}
 		for slot in self.slots:
-			for k,v in slot.feats.items():
+			for k,v in list(slot.feats.items()):
 				if (not k in posfeats):
 					posfeats[k]=[]
 				posfeats[k]+=[v]
 			posfeats['prom.meter']+=[self.meterVal]
 
-		for k,v in posfeats.items():
+		for k,v in list(posfeats.items()):
 			posfeats[k]=tuple(v)
 
 		return posfeats
@@ -74,7 +74,7 @@ class MeterPosition(Parse):
 			for slot in self.slots:
 				slotTokens.append(self.u2s(slot.token))
 
-			self.token = string.join(slotTokens, '.')
+			self.token = ".".join(slotTokens)
 
 			if self.meterVal == 's':
 				self.token = self.token.upper()

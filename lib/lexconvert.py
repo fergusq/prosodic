@@ -31,8 +31,8 @@ table = [
    ('festival', 'espeak', 'sapi', 'cepstral', 'mac', 'x-sampa', 'acapela-uk', 'cmu', 'bbcmicro', 'unicode-ipa','pinyin-approx'),
    # The first entry MUST be the syllable separator:
    ('0', '%', '-', '0', '=', '.', '', '0', '', '.',''),
-   ('1', "'", '1', '1', '1', '"', 0, '1', '1', u'\u02c8','4'), # primary stress - ignoring this for acapela-uk
-   ('2', ',', '2', '0', '2', '%', 0, '2', '2', u'\u02cc','2'), # secondary stress - ignoring this for acapela-uk
+   ('1', "'", '1', '1', '1', '"', 0, '1', '1', '\u02c8','4'), # primary stress - ignoring this for acapela-uk
+   ('2', ',', '2', '0', '2', '%', 0, '2', '2', '\u02cc','2'), # secondary stress - ignoring this for acapela-uk
    ('', '', '', '', '', '', 0, '', '', '-',''),
    (0, 0, 0, 0, 0, 0, 0, 0, '', '#',0),
    (0, 0, 0, 0, 0, 0, 0, 0, '', ' ',0),
@@ -40,88 +40,88 @@ table = [
    (0, 0, 0, 0, 0, 0, 0, 0, '', '?',0),
    (0, 0, 0, 0, 0, 0, 0, 0, '', '!',0),
    (0, 0, 0, 0, 0, 0, 0, 0, '', ',',0),
-   ('aa', ['A:', 'A@', 'aa'], 'aa', 'a', 'AA', 'A', 'A:', 'AA', 'AA', u'\u0251','a5'),
-   (0, 'A', 0, 0, 0, 0, 0, '2', 0, u'\u2051',0),
-   (0, 'A:', 0, 0, 0, ':', 0, '1', 0, u'\u02d0',0),
-   (0, 0, 0, 0, 0, 'A:', 0, 'AA', 0, u'\u0251\u02d0',0),
-   (0, 0, 0, 0, 0, 'Ar\\', 0, 0, 0, u'\u0251\u0279',0),
+   ('aa', ['A:', 'A@', 'aa'], 'aa', 'a', 'AA', 'A', 'A:', 'AA', 'AA', '\u0251','a5'),
+   (0, 'A', 0, 0, 0, 0, 0, '2', 0, '\u2051',0),
+   (0, 'A:', 0, 0, 0, ':', 0, '1', 0, '\u02d0',0),
+   (0, 0, 0, 0, 0, 'A:', 0, 'AA', 0, '\u0251\u02d0',0),
+   (0, 0, 0, 0, 0, 'Ar\\', 0, 0, 0, '\u0251\u0279',0),
    (0, 0, 0, 0, 'aa', 'a:', 0, 0, 0, 'a\\u02d0',0),
-   ('a', ['a', '&'], 'ae', 'ae', 'AE', '{', '{', 'AE', 'AE', [u'\xe6','a'],'ya5'),
-   ('uh', 'V', 'ah', 'ah', 'UX', 'V', 'V', 'AH', 'OH', u'\u028c','e5'),
-   ('o', '0', 'ao', 'oa', 'AA', 'Q', 'Q', 'AA', 'O', u'\u0252','yo5'),
-   (0, 0, 0, 0, 0, 'A', 'A', 0, 0, u'\u0251',0),
-   (0, 0, 0, 0, 0, 'O', 'O', 0, 0, u'\u0254',0),
-   ('au', 'aU', 'aw', 'aw', 'AW', 'aU', 'aU', 'AW', 'AW', u'a\u028a','ao5'),
-   (0, 0, 0, 0, 0, '{O', '{O', 0, 0, u'\xe6\u0254',0),
-   ('@', '@', 'ax', 'ah', 'AX', '@', '@', 'AH', 'AH', u'\u0259','e5'),
-   ('@@', '3:', 'er', 'er', 0, '3:', '3:', 'ER', 'ER', u'\u0259\u02d0','e5'),
-   ('@', '3', 'ax', 'ah', 0, '@', '@', 'AH', 'AH', u'\u025a','e5'),
-   ('@1', 'a2', 0, 0, 0, 0, 0, 0, 0, u'\u0259', 0),
+   ('a', ['a', '&'], 'ae', 'ae', 'AE', '{', '{', 'AE', 'AE', ['\xe6','a'],'ya5'),
+   ('uh', 'V', 'ah', 'ah', 'UX', 'V', 'V', 'AH', 'OH', '\u028c','e5'),
+   ('o', '0', 'ao', 'oa', 'AA', 'Q', 'Q', 'AA', 'O', '\u0252','yo5'),
+   (0, 0, 0, 0, 0, 'A', 'A', 0, 0, '\u0251',0),
+   (0, 0, 0, 0, 0, 'O', 'O', 0, 0, '\u0254',0),
+   ('au', 'aU', 'aw', 'aw', 'AW', 'aU', 'aU', 'AW', 'AW', 'a\u028a','ao5'),
+   (0, 0, 0, 0, 0, '{O', '{O', 0, 0, '\xe6\u0254',0),
+   ('@', '@', 'ax', 'ah', 'AX', '@', '@', 'AH', 'AH', '\u0259','e5'),
+   ('@@', '3:', 'er', 'er', 0, '3:', '3:', 'ER', 'ER', '\u0259\u02d0','e5'),
+   ('@', '3', 'ax', 'ah', 0, '@', '@', 'AH', 'AH', '\u025a','e5'),
+   ('@1', 'a2', 0, 0, 0, 0, 0, 0, 0, '\u0259', 0),
    ('@2', '@', 0, 0, 0, 0, 0, 0, 0, 0, 0),
-   ('ai', 'aI', 'ay', 'ay', 'AY', 'aI', 'aI', 'AY', 'IY', u'a\u026a','ai5'),
-   (0, 0, 0, 0, 0, 'Ae', 'A e', 0, 0, u'\u0251e',0),
+   ('ai', 'aI', 'ay', 'ay', 'AY', 'aI', 'aI', 'AY', 'IY', 'a\u026a','ai5'),
+   (0, 0, 0, 0, 0, 'Ae', 'A e', 0, 0, '\u0251e',0),
    ('b', 'b', 'b', 'b', 'b', 'b', 'b', 'B ', 'B', 'b','bu0'),
-   ('ch', 'tS', 'ch', 'ch', 'C', 'tS', 't S', 'CH', 'CH', [u't\u0283', u'\u02a7'],'che0'),
+   ('ch', 'tS', 'ch', 'ch', 'C', 'tS', 't S', 'CH', 'CH', ['t\u0283', '\u02a7'],'che0'),
    ('d', 'd', 'd', 'd', 'd', 'd', 'd', 'D ', 'D', 'd','de0'),
-   ('dh', 'D', 'dh', 'dh', 'D', 'D', 'D', 'DH', 'DH', u'\xf0','ze0'),
-   ('e', 'E', 'eh', 'eh', 'EH', 'E', 'e', 'EH', 'EH', u'\u025b','ye5'),
+   ('dh', 'D', 'dh', 'dh', 'D', 'D', 'D', 'DH', 'DH', '\xf0','ze0'),
+   ('e', 'E', 'eh', 'eh', 'EH', 'E', 'e', 'EH', 'EH', '\u025b','ye5'),
    (0, 0, 'ey', 0, 0, 'e', 0, 0, 0, 'e',0),
-   ('@@', '3:', 'er', 'er', 'AX', '3:', '3:', 'ER', 'ER', [u'\u025d', u'\u025c\u02d0'],'e5'),
-   ('e@', 'e@', 'eh r', 'e@', 'EH r', 'E@', 'e @', 0, 'AI', u'\u025b\u0259','ye5'),
-   (0, 0, 0, 0, 0, 'Er\\', 'e r', 0, 0, u'\u025b\u0279',0),
-   (0, 0, 0, 0, 0, 'e:', 'e :', 0, 0, u'e\u02d0',0),
-   (0, 0, 0, 0, 0, 'E:', 0, 0, 0, u'\u025b\u02d0',0),
-   (0, 0, 0, 0, 0, 'e@', 'e @', 0, 0, u'e\u0259',0),
-   ('ei', 'eI', 'ey', 'ey', 'EY', 'eI', 'eI', 'EY', 'AY', u'e\u026a','ei5'),
-   (0, 0, 0, 0, 0, '{I', '{I', 0, 0, u'\xe6\u026a',0),
+   ('@@', '3:', 'er', 'er', 'AX', '3:', '3:', 'ER', 'ER', ['\u025d', '\u025c\u02d0'],'e5'),
+   ('e@', 'e@', 'eh r', 'e@', 'EH r', 'E@', 'e @', 0, 'AI', '\u025b\u0259','ye5'),
+   (0, 0, 0, 0, 0, 'Er\\', 'e r', 0, 0, '\u025b\u0279',0),
+   (0, 0, 0, 0, 0, 'e:', 'e :', 0, 0, 'e\u02d0',0),
+   (0, 0, 0, 0, 0, 'E:', 0, 0, 0, '\u025b\u02d0',0),
+   (0, 0, 0, 0, 0, 'e@', 'e @', 0, 0, 'e\u0259',0),
+   ('ei', 'eI', 'ey', 'ey', 'EY', 'eI', 'eI', 'EY', 'AY', 'e\u026a','ei5'),
+   (0, 0, 0, 0, 0, '{I', '{I', 0, 0, '\xe6\u026a',0),
    ('f', 'f', 'f', 'f', 'f', 'f', 'f', 'F ', 'F', 'f','fu0'),
-   ('g', 'g', 'g', 'g', 'g', 'g', 'g', 'G ', 'G', [u'\u0261', 'g'],'ge0'),
+   ('g', 'g', 'g', 'g', 'g', 'g', 'g', 'G ', 'G', ['\u0261', 'g'],'ge0'),
    ('h', 'h', 'h', 'h', 'h', 'h', 'h', 'HH', '/H', 'h','he0'), # Jan suggested "hh" for SAPI, but it doesn't work on XP
-   ('i', 'I', 'ih', 'ih', 'IH', 'I', 'I', 'IH', 'IH', u'\u026a','yi5'),
-   (0, 0, 0, 0, 0, '1', '1', 0, 0, u'\u0268',0),
-   (0, ['I', 'I2'], 0, 0, 'IX', 'I', 'I', 0, 'IX', u'\u026a',0),
-   ('i@', 'i@', 'iy ah', 'i ah', 'IY UX', 'I@', 'I@', 'EY AH', 'IXAH', u'\u026a\u0259','yi3re5'),
-   (0, 0, 0, 0, 0, 'Ir\\', 'I r', 0, 0, u'\u026a\u0279',0),
+   ('i', 'I', 'ih', 'ih', 'IH', 'I', 'I', 'IH', 'IH', '\u026a','yi5'),
+   (0, 0, 0, 0, 0, '1', '1', 0, 0, '\u0268',0),
+   (0, ['I', 'I2'], 0, 0, 'IX', 'I', 'I', 0, 'IX', '\u026a',0),
+   ('i@', 'i@', 'iy ah', 'i ah', 'IY UX', 'I@', 'I@', 'EY AH', 'IXAH', '\u026a\u0259','yi3re5'),
+   (0, 0, 0, 0, 0, 'Ir\\', 'I r', 0, 0, '\u026a\u0279',0),
    ('ii', ['i:','i'], 'iy', 'i', 'IY', 'i', 'i', 'IY', 'EE', 'i','yi5'),
-   (0, 0, 0, 0, 0, 'i:', 'i:', 0, 0, u'i\u02d0',0),
-   ('jh', 'dZ', 'jh', 'jh', 'J', 'dZ', 'dZ', 'JH', 'J', [u'd\u0292', u'\u02a4'],'zhe0'),
+   (0, 0, 0, 0, 0, 'i:', 'i:', 0, 0, 'i\u02d0',0),
+   ('jh', 'dZ', 'jh', 'jh', 'J', 'dZ', 'dZ', 'JH', 'J', ['d\u0292', '\u02a4'],'zhe0'),
    ('k', 'k', 'k', 'k', 'k', 'k', 'k', 'K ', 'K', 'k','ke0'),
    (0, 'x', 0, 0, 0, 'x', 'x', 0, 0, 'x',0), # actually 'x' is like Scottish 'loch', but if the synth can't do that then try k 
-   ('l', ['l', 'L'], 'l', 'l', 'l', 'l', 'l', 'L ', 'L', ['l', u'd\u026b'],'le0'),
+   ('l', ['l', 'L'], 'l', 'l', 'l', 'l', 'l', 'L ', 'L', ['l', 'd\u026b'],'le0'),
    ('m', 'm', 'm', 'm', 'm', 'm', 'm', 'M ', 'M', 'm','me0'),
    ('n', 'n', 'n', 'n', 'n', 'n', 'n', 'N ', 'N', 'n','ne0'),
-   ('ng', 'N', 'ng', 'ng', 'N', 'N', 'N', 'NG', 'NX', u'\u014b','eng0'),
-   ('ou', 'oU', 'ow', 'ow', 'OW', '@U', '@U', 'OW', 'OW', [u'\u0259\u028a', 'o'],'ou5'),
-   (0, 0, 0, 0, 0, 'oU', 'o U', 0, 0, u'o\u028a',0),
-   (0, 0, 0, 0, 0, '@}', '@ }', 0, 0, u'\u0259\u0289',0),
-   ('oi', 'OI', 'oy', 'oy', 'OY', 'OI', 'OI', 'OY', 'OY', u'\u0254\u026a','ruo2yi5'),
-   (0, 0, 0, 0, 0, 'oI', 'o I', 0, 0, u'o\u026a',0),
+   ('ng', 'N', 'ng', 'ng', 'N', 'N', 'N', 'NG', 'NX', '\u014b','eng0'),
+   ('ou', 'oU', 'ow', 'ow', 'OW', '@U', '@U', 'OW', 'OW', ['\u0259\u028a', 'o'],'ou5'),
+   (0, 0, 0, 0, 0, 'oU', 'o U', 0, 0, 'o\u028a',0),
+   (0, 0, 0, 0, 0, '@}', '@ }', 0, 0, '\u0259\u0289',0),
+   ('oi', 'OI', 'oy', 'oy', 'OY', 'OI', 'OI', 'OY', 'OY', '\u0254\u026a','ruo2yi5'),
+   (0, 0, 0, 0, 0, 'oI', 'o I', 0, 0, 'o\u026a',0),
    ('p', 'p', 'p', 'p', 'p', 'p', 'p', 'P ', 'P', 'p','pu0'),
-   ('r', 'r', 'r', 'r', 'r', 'r\\', 'r', 'R ', 'R', u'\u0279','re0'),
+   ('r', 'r', 'r', 'r', 'r', 'r\\', 'r', 'R ', 'R', '\u0279','re0'),
    (0, 0, 0, 0, 0, 'r', 0, 0, 0, 'r',0),
    ('s', 's', 's', 's', 's', 's', 's', 'S ', 'S', 's','se0'),
-   ('sh', 'S', 'sh', 'sh', 'S', 'S', 'S', 'SH', 'SH', u'\u0283','she0'),
-   ('t', 't', 't', 't', 't', 't', 't', 'T ', 'T', ['t', u'\u027e'],'te0'),
-   ('th', 'T', 'th', 'th', 'T', 'T', 'T', 'TH', 'TH', u'\u03b8','zhe0'),
-   ('u@', 'U@', 'uh', 'uh', 'UH', 'U@', 'U@', 'UH', 'UH', u'\u028a\u0259','wu5'),
-   (0, 0, 0, 0, 0, 'Ur\\', 'U r', 0, 0, u'\u028a\u0279',0),
-   ('u', 'U', 0, 0, 0, 'U', 'U', 0, '/U', u'\u028a',0),
-   ('uu', 'u:', 'uw', 'uw', 'UW', '}:', 'u:', 'UW', ['UW','UX'], u'\u0289\u02d0','yu5'),
-   (0, 0, 0, 0, 0, 'u:', 0, 0, 0, [u'u\u02d0', 'u'],0),
-   ('oo', 'O:', 'AO', 'ao', 'AO', 'O:', 'O:', 'AO', 'AO', u'\u0254\u02d0','huo5'),
-   (0, 0, 0, 0, 0, 'O', 'O', 0, 0, u'\u0254',0),
-   (0, 0, 0, 0, 0, 'o:', 'O:', 0, 0, u'o\u02d0',0),
-   (0, ['O@', 'o@', 'O'], 0, 0, 0, 'O:', 0, 0, 0, u'\u0254\u02d0',0),
+   ('sh', 'S', 'sh', 'sh', 'S', 'S', 'S', 'SH', 'SH', '\u0283','she0'),
+   ('t', 't', 't', 't', 't', 't', 't', 'T ', 'T', ['t', '\u027e'],'te0'),
+   ('th', 'T', 'th', 'th', 'T', 'T', 'T', 'TH', 'TH', '\u03b8','zhe0'),
+   ('u@', 'U@', 'uh', 'uh', 'UH', 'U@', 'U@', 'UH', 'UH', '\u028a\u0259','wu5'),
+   (0, 0, 0, 0, 0, 'Ur\\', 'U r', 0, 0, '\u028a\u0279',0),
+   ('u', 'U', 0, 0, 0, 'U', 'U', 0, '/U', '\u028a',0),
+   ('uu', 'u:', 'uw', 'uw', 'UW', '}:', 'u:', 'UW', ['UW','UX'], '\u0289\u02d0','yu5'),
+   (0, 0, 0, 0, 0, 'u:', 0, 0, 0, ['u\u02d0', 'u'],0),
+   ('oo', 'O:', 'AO', 'ao', 'AO', 'O:', 'O:', 'AO', 'AO', '\u0254\u02d0','huo5'),
+   (0, 0, 0, 0, 0, 'O', 'O', 0, 0, '\u0254',0),
+   (0, 0, 0, 0, 0, 'o:', 'O:', 0, 0, 'o\u02d0',0),
+   (0, ['O@', 'o@', 'O'], 0, 0, 0, 'O:', 0, 0, 0, '\u0254\u02d0',0),
    ('v', 'v', 'v', 'v', 'v', 'v', 'v', 'V ', 'V', 'v','fu0'),
    ('w', 'w', 'w', 'w', 'w', 'w', 'w', 'W ', 'W', 'w','wu0'),
-   (0, 0, 0, 0, 0, 'W', 0, 0, 0, u'\u028d',0), # Jan suggested "x" for SAPI here, but that doesn't work on XP
+   (0, 0, 0, 0, 0, 'W', 0, 0, 0, '\u028d',0), # Jan suggested "x" for SAPI here, but that doesn't work on XP
    ('y', 'j', 'y', 'j', 'y', 'j', 'j', 'Y ', 'Y', 'j','yu0'),
    ('z', 'z', 'z', 'z', 'z', 'z', 'z', 'Z ', 'Z', 'z','ze0'),
-   ('zh', 'Z', 'zh', 'zh', 'Z', 'Z', 'Z', 'ZH', 'ZH', u'\u0292','zhe0'),
+   ('zh', 'Z', 'zh', 'zh', 'Z', 'Z', 'Z', 'ZH', 'ZH', '\u0292','zhe0'),
    # TODO \u0294 (glottal stop) to eSpeak? (for local dialects)
    # TODO bbcmicro also has CT as in fact, DR as in dragon, DUX as in duke, TR as in track
    # Hack (must be at end) - make sure all dictionaries have an entry for '@', for the @l rule:
-   ('@', '@', '@', 'ah', 'AX', '@', '@', '@', 'AH', u'\u0259','wu5'),
+   ('@', '@', '@', 'ah', 'AX', '@', '@', '@', 'AH', '\u0259','wu5'),
    (0, 0, 'ax', '@', 0, 0, 0, 0, 0, 0,0),
    (0, 0, 0, 'ah', '@', 0, 0, 0, 0, 0,0),
    (0, 0, 0, 0, 'AX', 0, 0, 0, '@', '@',0),
@@ -131,7 +131,7 @@ formats_where_space_separates_words = ["espeak","mac","unicode-ipa","x-sampa","b
 
 espeak_consonants = "bdDfghklmnNprsStTvwjzZ"
 
-import commands,sys,re,os
+import subprocess,sys,re,os
 
 for row in table: assert len(row)==len(table[0]),"problem with "+repr(row) # sanity-check the table
 
@@ -140,49 +140,49 @@ def compare_tables(table1,table2,colsToIgnore):
   def checkDuplicateRows(t,which):
     d = {}
     for i in t:
-      if d.has_key(i): print "Warning: duplicate row in "+which+":",i
+      if i in d: print("Warning: duplicate row in "+which+":",i)
       d[i]=1
   checkDuplicateRows(table1,"first table") ; checkDuplicateRows(table2,"second table")
   for col in table1[0]:
-    if col not in table2[0]: print "Deleted column:",col
+    if col not in table2[0]: print("Deleted column:",col)
   for col in table2[0]:
-    if col not in table1[0]: print "Added column:",col
+    if col not in table1[0]: print("Added column:",col)
   maps = [{}, {}]
-  commonCols = filter(lambda x:x in table2[0],table1[0])
+  commonCols = [x for x in table1[0] if x in table2[0]]
   for dx in [0,1]:
     table = [table1,table2][dx]
     for col1 in commonCols:
       if col1 in colsToIgnore: continue
       i1 = list(table[0]).index(col1)
-      for col2 in filter(lambda x: x>col1, commonCols):
+      for col2 in [x for x in commonCols if x>col1]:
         if col2 in colsToIgnore: continue
         i2 = list(table[0]).index(col2)
         for row in table[1:]:
           if not row[i1] or not row[i2]: continue # don't bother reporting mappings involving null strings - they don't matter
           maps[dx][(col1,row[i1],col2,row[i2])] = True
-  deleted_mappings = filter(lambda k:not maps[1].has_key(k), maps[0].keys())
-  added_mappings = filter(lambda k:not maps[0].has_key(k), maps[1].keys())
+  deleted_mappings = [k for k in list(maps[0].keys()) if k not in maps[1]]
+  added_mappings = [k for k in list(maps[1].keys()) if k not in maps[0]]
   def simplify_mappings(mappings,which):
     byRow = {} ; byCol = {}
     for k1,v1,k2,v2 in mappings:
-      if not byRow.has_key((k1,v1)): byRow[(k1,v1)]=[]
+      if (k1,v1) not in byRow: byRow[(k1,v1)]=[]
       byRow[(k1,v1)].append((k2,v2))
-      if not byCol.has_key((k2,v2)): byCol[(k2,v2)]=[]
+      if (k2,v2) not in byCol: byCol[(k2,v2)]=[]
       byCol[(k2,v2)].append((k1,v1))
     byColCopy = byCol.copy()
-    for r in byRow.keys():
+    for r in list(byRow.keys()):
       rowLen = len(r)
-      maxColLen = max(map(lambda c:len(byCol[c]),byRow[r]))
+      maxColLen = max([len(byCol[c]) for c in byRow[r]])
       if rowLen > maxColLen:
         if len(byRow[r])>1: word="mappings:"
         else: word="mapping"
-        print which,word,r,"to",byRow[r]
-        for k in byColCopy.keys():
+        print(which,word,r,"to",byRow[r])
+        for k in list(byColCopy.keys()):
           if r in byColCopy[k]: byColCopy[k].remove(r)
-    for c in filter(lambda x:byColCopy[x],byColCopy.keys()):
+    for c in [x for x in list(byColCopy.keys()) if byColCopy[x]]:
       if len(byColCopy[c])>1: word="mappings:"
       else: word="mapping"
-      print which,word,c,"to",byColCopy[c]
+      print(which,word,c,"to",byColCopy[c])
   simplify_mappings(deleted_mappings,"Deleted")
   simplify_mappings(added_mappings,"Added")
 
@@ -192,7 +192,7 @@ def compare_tables(table1,table2,colsToIgnore):
 
 def squash_table(colsToDelete):
   # For maintenance use.  Deletes colsToDelete, and introduces dittos/list-alternatives
-  colsToDelete=map(lambda c:list(table[0]).index(c),colsToDelete)
+  colsToDelete=[list(table[0]).index(c) for c in colsToDelete]
   colsToDelete.sort() ; colsToDelete.reverse()
   ret = [] ; lastRow = None
   for row in table:
@@ -203,7 +203,7 @@ def squash_table(colsToDelete):
         k=-1
         while ret[k][i]==0: k -= 1
         if row[i]==ret[k][i]: row[i]=0
-      if len(filter(lambda x:not x==0,row))==1:
+      if len([x for x in row if not x==0])==1:
         # only 1 thing changed
         ret[-1]=list(ret[-1])
         for i in range(len(row)):
@@ -214,9 +214,9 @@ def squash_table(colsToDelete):
         continue
     ret.append(tuple(row))
   # return ret
-  print "table = ["
-  for r in ret: print "   "+repr(r)+","
-  print "]"
+  print("table = [")
+  for r in ret: print("   "+repr(r)+",")
+  print("]")
 
 # Deal with any rows that contain lists of alternatives
 # or 0 (ditto) marks
@@ -229,14 +229,14 @@ for line in table:
   for i in range(len(line)):
     if line[i]==0: line[i]=prevLine[i]
   line=tuple(line)
-  colsWithLists = filter(lambda col: type(line[col])==type([]), range(len(line)))
+  colsWithLists = [col for col in range(len(line)) if type(line[col])==type([])]
   if not colsWithLists: newTable.append(line)
   for col in colsWithLists:
     def firstItemIfList(l):
       if type(l)==type([]): return l[0]
       else: return l
-    for extraTuple in [tuple(map(lambda x:firstItemIfList(x),list(line[:col])+[i]+list(line[col+1:]))) for i in line[col]]:
-      if hadAlready.has_key(extraTuple): continue
+    for extraTuple in [tuple([firstItemIfList(x) for x in list(line[:col])+[i]+list(line[col+1:])]) for i in line[col]]:
+      if extraTuple in hadAlready: continue
       hadAlready[extraTuple]=1
       newTable.append(extraTuple)
   prevLine = line
@@ -268,10 +268,7 @@ def convert(pronunc,source,dest):
         # try to decode it
         if "\\u" in pronunc and not '"' in pronunc: # maybe \uNNNN copied from Gecko on X11, can just evaluate it to get the unicode
             # (NB make sure to quote the \'s if pasing in on the command line)
-            try: pronunc=eval('u"'+pronunc+'"')
-            except: pass
-        else: # see if it makes sense as utf-8
-            try: pronunc = pronunc.decode('utf-8')
+            try: pronunc=eval('"'+pronunc+'"')
             except: pass
     ret = [] ; toAddAfter = None
     dictionary = make_dictionary(source,dest)
@@ -281,7 +278,7 @@ def convert(pronunc,source,dest):
               #sys.stderr.write("Warning: ignoring unknown espeak phoneme "+repr(pronunc[0])+"\n")
               pass
             if not lettersToTry: pronunc=pronunc[1:] # ignore
-            elif dictionary.has_key(pronunc[:lettersToTry]):
+            elif pronunc[:lettersToTry] in dictionary:
                 toAdd=dictionary[pronunc[:lettersToTry]]
                 if toAdd in ['0','1','2','4'] and not dest=="espeak": # it's a stress mark in a notation that places stress marks AFTER vowels (not dest=="espeak" added because espeak uses 0 for other purposes)
                     if dest=="bbcmicro": # not sure which pitch levels to map the stresses to; try these:
@@ -295,7 +292,7 @@ def convert(pronunc,source,dest):
                         r=len(ret)-1
                         while ret[r] in dest_consonants or ret[r].endswith("*added"): r -= 1 # (if that raises IndexError then the input had a stress mark before any vowel) ("*added" condition is there so that implicit vowels don't get the stress)
                         ret.insert(r+1,toAdd) ; toAdd=""
-                elif toAdd in u"',\u02c8\u02cc" and dest in ["espeak","unicode-ipa"] and not source in ["espeak","unicode-ipa"]: # it's a stress mark that should be moved from after the vowel to before it
+                elif toAdd in "',\u02c8\u02cc" and dest in ["espeak","unicode-ipa"] and not source in ["espeak","unicode-ipa"]: # it's a stress mark that should be moved from after the vowel to before it
                     i=len(ret)
                     while i and (ret[i-1] in dest_consonants or ret[i-1].endswith("*added")): i -= 1
                     if i: i-=1
@@ -392,7 +389,7 @@ def espeak_probably_right_already(existing_pronunc,new_pronunc):
 
 def parse_festival_dict(festival_location):
     ret = []
-    for line in open(festival_location).xreadlines():
+    for line in open(festival_location):
         line=line.strip()
         if "((pos" in line: line=line[:line.index("((pos")]
         if line.startswith('( "'): line=line[3:]
@@ -407,24 +404,24 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
     os.system("mv en_extra en_extra~") # start with blank 'extra' dictionary
     if check_existing_pronunciation: os.system("espeak --compile=en") # so that the pronunciation we're checking against is not influenced by a previous version of en_extra
     outFile=open("en_extra","w")
-    print "Reading dictionary lists"
+    print("Reading dictionary lists")
     wordDic = {} ; ambiguous = {}
-    for line in filter(lambda x:x.split() and not re.match(r'^[a-z]* *\$',x),open("en_list").read().split('\n')): ambiguous[line.split()[0]]=ambiguous[line.split()[0]+'s']=True # this stops the code below from overriding anything already in espeak's en_list.  If taking out then you need to think carefully about words like "a", "the" etc.
+    for line in [x for x in open("en_list").read().split('\n') if x.split() and not re.match(r'^[a-z]* *\$',x)]: ambiguous[line.split()[0]]=ambiguous[line.split()[0]+'s']=True # this stops the code below from overriding anything already in espeak's en_list.  If taking out then you need to think carefully about words like "a", "the" etc.
     for word,pos,pronunc in parse_festival_dict(festival_location):
         pronunc=pronunc.replace("i@ 0 @ 0","ii ou 2 ").replace("i@ 0 u 0","ii ou ") # (hack for OALD's "radio"/"video"/"stereo"/"embryo" etc)
         pronunc=pronunc.replace("0","") # 0's not necessary, and OALD sometimes puts them in wrong places, confusing the converter
-        if wordDic.has_key(word):
+        if word in wordDic:
             ambiguous[word] = True
             del wordDic[word] # better not go there
-        if not ambiguous.has_key(word):
+        if word not in ambiguous:
             wordDic[word] = (pronunc, pos)
     toDel = []
     if check_existing_pronunciation:
-        print "Checking existing pronunciation"
+        print("Checking existing pronunciation")
         proc=os.popen("espeak -q -x -v en-rp > /tmp/.pronunc 2>&1","w")
         wList = []
     progressCount=0 ; oldPercent=-1
-    for word,(pronunc,pos) in wordDic.items():
+    for word,(pronunc,pos) in list(wordDic.items()):
         if check_existing_pronunciation:
             percent = int(progressCount*100/len(wordDic))
             if not percent==oldPercent: sys.stdout.write(str(percent)+"%\r") ; sys.stdout.flush()
@@ -436,7 +433,7 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
         elif word.startswith("plaque") or word in "friday saturday sunday tuesday thursday yesterday".split():
             # hack to accept eSpeak's pl'ak instead of pl'A:k - order was reversed in the March 2009 draft
             toDel.append(word)
-        elif word[-1]=="s" and wordDic.has_key(word[:-1]):
+        elif word[-1]=="s" and word[:-1] in wordDic:
             # unnecessary plural (espeak will pick up on them anyway)
             toDel.append(word)
         elif word.startswith("year") or "quarter" in word: toDel.append(word) # don't like festival's pronunciation of those (TODO: also 'memorial' why start with [m'I])
@@ -445,15 +442,15 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
             proc.flush() # so the progress indicator works
             wList.append(word)
     if check_existing_pronunciation:
-        proc.close() ; print
+        proc.close() ; print()
         oldPronDic = {}
         for k,v in zip(wList,open("/tmp/.pronunc").read().split("\n")): oldPronDic[k]=v.strip().replace(" ","")
     for w in toDel: del wordDic[w]
-    print "Doing the conversion"
+    print("Doing the conversion")
     lines_output = 0
     total_lines = 0
     not_output_because_ok = []
-    items = wordDic.items() ; items.sort() # necessary because of the hacks below which check for the presence of truncated versions of the word (want to have decided whether or not to output those truncated versions before reaching the hacks)
+    items = list(wordDic.items()) ; items.sort() # necessary because of the hacks below which check for the presence of truncated versions of the word (want to have decided whether or not to output those truncated versions before reaching the hacks)
     for word,(pronunc,pos) in items:
         total_lines += 1
         new_e_pronunc = convert(pronunc,"festival","espeak")
@@ -462,7 +459,7 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
         unrelated_word = None
         if check_existing_pronunciation: espeakPronunc = oldPronDic.get(word,"")
         else: espeakPronunc = ""
-        if word[-1]=='e' and wordDic.has_key(word[:-1]): unrelated_word, espeakPronunc = word[:-1],"" # hack: if word ends with 'e' and dropping the 'e' leaves a valid word that's also in the dictionary, we DON'T want to drop this word on the grounds that espeak already gets it right, because if we do then adding 's' to this word may cause espeak to add 's' to the OTHER word ('-es' rule).
+        if word[-1]=='e' and word[:-1] in wordDic: unrelated_word, espeakPronunc = word[:-1],"" # hack: if word ends with 'e' and dropping the 'e' leaves a valid word that's also in the dictionary, we DON'T want to drop this word on the grounds that espeak already gets it right, because if we do then adding 's' to this word may cause espeak to add 's' to the OTHER word ('-es' rule).
         if espeak_probably_right_already(espeakPronunc,new_e_pronunc):
             not_output_because_ok.append(word)
             continue
@@ -471,12 +468,12 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
         if espeakPronunc: outFile.write(", not [["+espeakPronunc+"]]")
         elif unrelated_word: outFile.write(" (here to stop espeak's affix rules getting confused by Festival's \""+unrelated_word+"\")")
         outFile.write("\n")
-    print "Corrected(?) %d entries out of %d" % (lines_output,total_lines)
+    print("Corrected(?) %d entries out of %d" % (lines_output,total_lines))
     if add_user_dictionary_also: convert_user_lexicon("festival","espeak",outFile)
     outFile.close()
     os.system("espeak --compile=en")
     if not_output_because_ok:
-      print "Checking for unwanted side-effects of those corrections" # e.g. terrible as Terr + ible, inducing as in+Duce+ing
+      print("Checking for unwanted side-effects of those corrections") # e.g. terrible as Terr + ible, inducing as in+Duce+ing
       proc=os.popen("espeak -q -x -v en-rp > /tmp/.pronunc 2>&1","w")
       progressCount = 0
       for w in not_output_because_ok:
@@ -496,8 +493,8 @@ def convert_system_festival_dictionary_to_espeak(festival_location,check_existin
     return not_output_because_ok
 
 def convert_user_lexicon(fromFormat,toFormat,outFile):
-    if fromFormat=="festival": lex = eval('['+commands.getoutput("grep '^(lex.add.entry' ~/.festivalrc | sed -e 's/;.*//' -e 's/[^\"]*\"/[\"/' -e 's/\" . /\",(\"/' -e 's/$/\"],/' -e 's/[()]/ /g' -e 's/  */ /g'")+']')
-    elif fromFormat=="espeak": lex = filter(lambda x:len(x)==2,[l.split()[:2] for l in open("en_extra").readlines()])
+    if fromFormat=="festival": lex = eval('['+subprocess.getoutput("grep '^(lex.add.entry' ~/.festivalrc | sed -e 's/;.*//' -e 's/[^\"]*\"/[\"/' -e 's/\" . /\",(\"/' -e 's/$/\"],/' -e 's/[()]/ /g' -e 's/  */ /g'")+']')
+    elif fromFormat=="espeak": lex = [x for x in [l.split()[:2] for l in open("en_extra").readlines()] if len(x)==2]
     elif fromFormat in ["acapela-uk","x-sampa"]:
         lex = []
         for l in open("acapela.txt").readlines():
@@ -520,7 +517,7 @@ def convert_user_lexicon(fromFormat,toFormat,outFile):
         elif toFormat=="cepstral": outFile.write(word.lower()+" 0 "+pronunc+"\n")
         elif toFormat=="mac": outFile.write(" -e \"s/"+word+"/[[inpt PHON]]"+pronunc+"[[inpt TEXT]]/g\"")
         elif toFormat=="bbcmicro": outFile.write("> "+word.upper()+"_"+chr(128)+pronunc) # (specifying 'whole word'; remove the space before or the _ after if you want)
-        elif toFormat=="unicode-ipa": outFile.write("<TR><TD>"+word+"</TD><TD>"+pronunc.encode("UTF-8")+"</TD></TR>\n")
+        elif toFormat=="unicode-ipa": outFile.write("<TR><TD>"+word+"</TD><TD>"+pronunc+"</TD></TR>\n")
         elif toFormat in ["acapela-uk","x-sampa"]: outFile.write(word+chr(9)+"#"+pronunc+chr(9)+"UNKNOWN\n") # TODO may be able to convert part-of-speech (NOUN etc) to/from some other formats e.g. Festival
         else: assert 0, "Writing to lexicon in %s format not yet implemented" % (format,)
     if toFormat=="mac": outFile.write("\n")
@@ -538,7 +535,6 @@ def markup_inline_word(format,pronunc):
     elif format=="bbcmicro" and first_word:
        first_word = False
        return "*SPEAK "+pronunc
-    elif format=="unicode-ipa": return pronunc.encode("utf-8") # UTF-8 output - ok for pasting into Firefox etc *IF* the terminal/X11 understands utf-8 (otherwise redirect to a file, point the browser at it, and set encoding to utf-8, or try --convert'ing which will o/p HTML)
     else: return pronunc # fallback - assume the user knows what to do with it
 
 def sylcount(festival):
@@ -546,7 +542,7 @@ def sylcount(festival):
   # "power") but this can vary in different songs
   count = inVowel = maybeCount = hadAt = 0
   festival = festival.split()
-  for phone,i in zip(festival,range(len(festival))):
+  for phone,i in zip(festival,list(range(len(festival)))):
     if phone[0] in "aeiou": inVowel=0 # unconditionally start new syllable
     if phone[0] in "aeiou@12":
       if not inVowel: count += 1
@@ -562,8 +558,6 @@ def sylcount(festival):
   return count
 def hyphenate(word,numSyls):
   orig = word
-  try: word,isu8 = word.decode('utf-8'),True
-  except: isu8 = False
   pre=[] ; post=[]
   while word and not 'a'<=word[0].lower()<='z':
     pre.append(word[0]) ; word=word[1:]
@@ -581,14 +575,13 @@ def hyphenate(word,numSyls):
         syls[-1] = syls[-1][1:]
       elif ((len(syls[-2])>2 and syls[-2][-1]==syls[-2][-2] and not syls[-2][-1].lower() in "aeiou") \
             or (syls[-1][0].lower() in "aeiouy" and len(syls[-2])>2)) \
-            and filter(lambda x:x.lower() in "aeiou",list(syls[-2][:-1])):
+            and [x for x in list(syls[-2][:-1]) if x.lower() in "aeiou"]:
         # repeated consonant at end - put one on next
         # or vowel on right: move a letter over (sometimes the right thing to do...)
         # (unless doing so leaves no vowels)
         syls[-1] = syls[-2][-1]+syls[-1]
         syls[-2] = syls[-2][:-1]
   word = ''.join(pre)+"- ".join(syls)+''.join(post)
-  if isu8: word=word.encode('utf-8')
   return word
 
 def main():
@@ -618,20 +611,20 @@ def main():
         format=sys.argv[i+1]
         w,r=os.popen4("espeak -q -x")
         w.write(' '.join(sys.argv[i+2:])) ; w.close()
-        print ", ".join([" ".join([markup_inline_word(format,convert(word,"espeak",format)) for word in line.split()]) for line in filter(lambda x:x,r.read().split("\n"))])
+        print(", ".join([" ".join([markup_inline_word(format,convert(word,"espeak",format)) for word in line.split()]) for line in [x for x in r.read().split("\n") if x]]))
     elif '--syllables' in sys.argv:
         i=sys.argv.index('--syllables')
         w,r=os.popen4("espeak -q -x")
         w.write('\n'.join(sys.argv[i+1:]).replace("!","").replace(":","")) ; w.close()
         rrr = r.read().split("\n")
-        print " ".join([hyphenate(word,sylcount(convert(line,"espeak","festival"))) for word,line in zip(sys.argv[i+1:],filter(lambda x:x,rrr))])
+        print(" ".join([hyphenate(word,sylcount(convert(line,"espeak","festival"))) for word,line in zip(sys.argv[i+1:],[x for x in rrr if x])]))
     elif '--phones2phones' in sys.argv:
         i=sys.argv.index('--phones2phones')
         format1,format2 = sys.argv[i+1],sys.argv[i+2]
         text=' '.join(sys.argv[i+3:])
         if format1 in formats_where_space_separates_words:
-          for w in text.split(): print markup_inline_word(format2, convert(w,format1,format2))
-        else: print markup_inline_word(format2, convert(text,format1,format2))
+          for w in text.split(): print(markup_inline_word(format2, convert(w,format1,format2)))
+        else: print(markup_inline_word(format2, convert(text,format1,format2)))
     elif '--convert' in sys.argv:
         i=sys.argv.index('--convert')
         fromFormat = sys.argv[i+1]
@@ -663,18 +656,18 @@ def main():
             except: pass
             assert not l, "File "+fname+" already exists and is not empty; are you sure you want to overwrite it?  (Delete it first if so)"
             outFile=open(fname,"w")
-        print "Writing lexicon entries to",fname
+        print("Writing lexicon entries to",fname)
         convert_user_lexicon(fromFormat,toFormat,outFile)
         outFile.close()
         if toFormat=="espeak": os.system("espeak --compile=en")
     else:
-        print program_name
-        print "\nAvailable pronunciation formats:",', '.join(list(table[0]))
-        print "\nUse --convert <from-format> <to-format> to convert a user lexicon file.  Expects Festival's .festivalrc to be in the home directory, or espeak's en_extra or Cepstral's lexicon.txt to be in the current directory.\nFor InfoVox/acapela, export the lexicon to acapela.txt in the current directory.\nE.g.: python lexconvert.py --convert festival cepstral"
-        print "\nUse --try <format> <pronunciation> to try a pronunciation with eSpeak (requires 'espeak' command),\n e.g.: python lexconvert.py --try festival h @0 l ou1\n or: python lexconvert.py --try unicode-ipa '\\u02c8\\u0279\\u026adn\\u0329' (for Unicode put '\\uNNNN' or UTF-8)\n (it converts to espeak format and then uses espeak to play it)\nUse --trymac to do the same as --try but with Mac OS 'say' instead of 'espeak'"
-        print "\nUse --phones2phones <format1> <format2> <phones in format1> to perform a one-off conversion of phones from format1 to format2."
-        print "\nUse --phones <format> <words> to convert 'words' to phones in format 'format'.  espeak will be run to do the text-to-phoneme conversion, and the output will then be converted to 'format'.\nE.g.: python lexconvert.py --phones unicode-ipa This is a test sentence.\nNote that some commercial speech synthesizers do not work well when driven entirely from phones, because their internal format is different and is optimised for normal text."
-        print "\nUse --syllables <words> to attempt to break 'words' into syllables for music lyrics (uses espeak to determine how many syllables are needed)"
-        print "\nUse --festival-dictionary-to-espeak <location> to convert the Festival Oxford Advanced Learners Dictionary (OALD) pronunciation lexicon to ESpeak.\nYou need to specify the location of the OALD file in <location>,\ne.g. for Debian festlex-oald package: python lexconvert.py --festival-dictionary-to-espeak /usr/share/festival/dicts/oald/all.scm\nor if you can't install the Debian package, try downloading http://ftp.debian.org/debian/pool/non-free/f/festlex-oald/festlex-oald_1.4.0.orig.tar.gz, unpack it into /tmp, and do: python lexconvert.py --festival-dictionary-to-espeak /tmp/festival/lib/dicts/oald/oald-0.4.out\nIn all cases you need to cd to the espeak source directory before running this.  en_extra will be overwritten.  Converter will also read your ~/.festivalrc if it exists.  (You can later incrementally update from ~/.festivalrc using the --convert option; the entries from the system dictionary will not be overwritten in this case.)  Specify --without-check to bypass checking the existing espeak pronunciation for OALD entries (much faster, but makes a larger file and in some cases compromises the pronunciation quality)."
+        print(program_name)
+        print("\nAvailable pronunciation formats:",', '.join(list(table[0])))
+        print("\nUse --convert <from-format> <to-format> to convert a user lexicon file.  Expects Festival's .festivalrc to be in the home directory, or espeak's en_extra or Cepstral's lexicon.txt to be in the current directory.\nFor InfoVox/acapela, export the lexicon to acapela.txt in the current directory.\nE.g.: python lexconvert.py --convert festival cepstral")
+        print("\nUse --try <format> <pronunciation> to try a pronunciation with eSpeak (requires 'espeak' command),\n e.g.: python lexconvert.py --try festival h @0 l ou1\n or: python lexconvert.py --try unicode-ipa '\\u02c8\\u0279\\u026adn\\u0329' (for Unicode put '\\uNNNN' or UTF-8)\n (it converts to espeak format and then uses espeak to play it)\nUse --trymac to do the same as --try but with Mac OS 'say' instead of 'espeak'")
+        print("\nUse --phones2phones <format1> <format2> <phones in format1> to perform a one-off conversion of phones from format1 to format2.")
+        print("\nUse --phones <format> <words> to convert 'words' to phones in format 'format'.  espeak will be run to do the text-to-phoneme conversion, and the output will then be converted to 'format'.\nE.g.: python lexconvert.py --phones unicode-ipa This is a test sentence.\nNote that some commercial speech synthesizers do not work well when driven entirely from phones, because their internal format is different and is optimised for normal text.")
+        print("\nUse --syllables <words> to attempt to break 'words' into syllables for music lyrics (uses espeak to determine how many syllables are needed)")
+        print("\nUse --festival-dictionary-to-espeak <location> to convert the Festival Oxford Advanced Learners Dictionary (OALD) pronunciation lexicon to ESpeak.\nYou need to specify the location of the OALD file in <location>,\ne.g. for Debian festlex-oald package: python lexconvert.py --festival-dictionary-to-espeak /usr/share/festival/dicts/oald/all.scm\nor if you can't install the Debian package, try downloading http://ftp.debian.org/debian/pool/non-free/f/festlex-oald/festlex-oald_1.4.0.orig.tar.gz, unpack it into /tmp, and do: python lexconvert.py --festival-dictionary-to-espeak /tmp/festival/lib/dicts/oald/oald-0.4.out\nIn all cases you need to cd to the espeak source directory before running this.  en_extra will be overwritten.  Converter will also read your ~/.festivalrc if it exists.  (You can later incrementally update from ~/.festivalrc using the --convert option; the entries from the system dictionary will not be overwritten in this case.)  Specify --without-check to bypass checking the existing espeak pronunciation for OALD entries (much faster, but makes a larger file and in some cases compromises the pronunciation quality).")
 
 if __name__ == "__main__": main()

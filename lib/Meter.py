@@ -14,8 +14,8 @@ def genDefault():
 	import prosodic
 	metername = sorted(prosodic.config['meters'].keys())[0]
 	meter=prosodic.config['meters'][metername]
-	print '>> no meter specified. defaulting to this meter:'
-	print meter
+	print('>> no meter specified. defaulting to this meter:')
+	print(meter)
 	return meter
 
 
@@ -222,7 +222,7 @@ class Meter:
 
 			## give up?
 			if maxsec and time.time()-clockstart > maxsec:
-				print '!! Time limit ({0}s) elapsed in trying to parse line:'.format(maxsec), ' '.join(wtok.token for wtok in wordlist)
+				print('!! Time limit ({0}s) elapsed in trying to parse line:'.format(maxsec), ' '.join(wtok.token for wtok in wordlist))
 				return [],[]
 
 			_parses,_boundedParses = self.parseLine(slots)
@@ -400,7 +400,7 @@ class Meter:
 
 	def printParses(self,parselist,lim=False,reverse=True):		# onlyBounded=True, [option done through "report" now]
 		n = len(parselist)
-		l_i = list(reversed(range(n))) if reverse else list(range(n))
+		l_i = list(reversed(list(range(n)))) if reverse else list(range(n))
 		parseiter = reversed(parselist) if reverse else parselist
 		#parselist.reverse()
 		o=""
@@ -427,7 +427,7 @@ class Meter:
 
 	def printScores(self, scores):
 		output = "\n"
-		for key, value in sorted(((str(k.name),v) for (k,v) in scores.items())):
+		for key, value in sorted(((str(k.name),v) for (k,v) in list(scores.items()))):
 			if not value: continue
 			#output += makeminlength("[*"+key+"]:"+str(value),24)
 			#output+='[*'+key+']: '+str(value)+"\n"

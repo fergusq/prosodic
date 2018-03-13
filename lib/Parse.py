@@ -47,7 +47,7 @@ class Parse(entity):
 			other.positions.append(copy(pos))
 
 		other.comparisonNums = copy(self.comparisonNums)
-		for k,v in self.constraintScores.items():
+		for k,v in list(self.constraintScores.items()):
 			other.constraintScores[k]=copy(v)
 		#other.constraintScores=self.constraintScores.copy()
 		#print self.constraintScores
@@ -193,7 +193,7 @@ class Parse(entity):
 	def score(self):
 		#if self.totalScore == None:
 		score = 0
-		for constraint, value in self.constraintScores.items():
+		for constraint, value in list(self.constraintScores.items()):
 			if value == "*":
 				self.totalScore = "*"
 				return self.totalScore
@@ -211,7 +211,7 @@ class Parse(entity):
 			x=repr(pos)
 			if viols and pos.has_viol: x+='*'
 			output.append(x)
-		return string.join(output, '|')
+		return "|".join(output)
 
 	def posString2(self,viols=False):
 		last_word = None
@@ -238,7 +238,7 @@ class Parse(entity):
 				else:
 					slotx.append('S')
 			output+=[''.join(slotx)]
-		return string.join(output, '|')
+		return "|".join(output)
 
 	def words(self):
 		last_word = None
@@ -266,6 +266,9 @@ class Parse(entity):
 			wordtok.set_as_best_word_option(wordobj)
 
 
+	
+	def __lt__(self, x):
+		return repr(self) < repr(x)
 
 	def __repr__(self):
 		return self.posString()
@@ -300,7 +303,7 @@ class Parse(entity):
 			if proms:
 				feats = ""
 				for unit in pos.slots:
-					for k,v in unit.feats.items():
+					for k,v in list(unit.feats.items()):
 						if (not "prom." in k): continue
 						if v:
 							feats += "[+" + str(k) + "] "
@@ -310,7 +313,7 @@ class Parse(entity):
 				feats = feats.strip()
 
 			viols = ""
-			for k,v in pos.constraintScores.items():
+			for k,v in list(pos.constraintScores.items()):
 				if v:
 					viols+=str(k)
 			viols = viols.strip()
@@ -350,12 +353,12 @@ class Parse(entity):
 		if not boolean:
 			return self.constraintScores
 		else:
-			return [(k,(v>0)) for (k,v) in self.constraintScores.items()]
+			return [(k,(v>0)) for (k,v) in list(self.constraintScores.items())]
 
 	@property
 	def violated(self):
 		viold=[]
-		for c,viol in self.constraintScores.items():
+		for c,viol in list(self.constraintScores.items()):
 			if viol:
 				viold+=[c]
 		return viold

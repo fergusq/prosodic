@@ -1,7 +1,7 @@
 from entity import entity
 from Phoneme import Phoneme
 from Syllable import Syllable
-class SyllableBody(entity,Syllable):
+class SyllableBody(Syllable):
 	def __init__(self,onset,rime,lang):
 		## initialize
 		self.feats = {}

@@ -19,6 +19,9 @@ class MeterConstraint:
 				os.chdir(originalPath)
 		self.weight=weight
 		self.logic=logic
+	
+	def __lt__(self, x):
+		return repr(self) < repr(x)
 
 	def __repr__(self):
 		return "[*"+self.name+"]"
